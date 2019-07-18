@@ -23,7 +23,7 @@ in_file = sys.argv[1]
 out_file = '.'.join(in_file.split('.')[:-1] + ['normalized'] + ['csv'])
 with open(in_file, 'r') as f:
     reader = csv.reader(f)
-    writer = csv.writer(open(out_file,"w"))
+    writer = csv.writer(open(out_file,"w",encoding="utf-8"))
     count = 0
     for row in reader:
         count += 1
