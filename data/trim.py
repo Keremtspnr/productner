@@ -4,9 +4,9 @@ import sys, csv
 
 in_file = sys.argv[1]
 out_file = '.'.join(in_file.split('.')[:-1] + ['trimmed'] + ['csv'])
-with open(in_file, 'r') as f:
+with open(in_file, 'r',encoding="utf-8") as f:
     reader = csv.reader(f)
-    writer = csv.writer(open(out_file,"w"))
+    writer = csv.writer(open(out_file,"w",encoding="utf-8"))
     count, trimmed = 0, 0
     for row in reader:
         try:
